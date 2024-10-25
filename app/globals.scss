@@ -1,0 +1,28 @@
+@use 'sass:color';
+@import './assets/normalize';
+@import './assets/variables-colors';
+@import './assets/variables';
+@import './assets/mixins';
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  color: $color-black;
+
+  font-family: $ff-sans;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  max-width: 1000px;
+  width: 100%;
+  margin: 0 auto;
+}

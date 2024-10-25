@@ -1,0 +1,41 @@
+@import '@/assets/variables';
+@import '@/assets/variables-colors';
+
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@mixin hover($_property, $_toValue) {
+  transition: #{$_property} $transition-time !important;
+
+  &:hover {
+    #{$_property}: $_toValue !important;
+  }
+}
+
+@mixin responsive() {
+  @media (max-width: #{$media-1100-width}) {
+    @content;
+  }
+}
+
+@mixin component-to-hide($min-width, $max-width) {
+  @media (min-width: $min-width) and (max-width: $max-width) {
+    display: none !important;
+  }
+}
+
+@mixin text-ellipsis($_width) {
+  overflow: hidden;
+  max-width: $_width;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
